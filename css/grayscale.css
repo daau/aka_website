@@ -74,7 +74,11 @@ a:focus {
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: #fff;
+    color: #000;
+}
+
+.fa-bars {
+  color: #fff;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
@@ -160,6 +164,10 @@ a:focus {
 
 .intro .intro-body .intro-text {
     font-size: 18px;
+}
+
+.intro-text {
+  margin-bottom: 150px;
 }
 
 @media(min-width:768px) {
@@ -255,11 +263,11 @@ a:focus {
     padding-top: 100px;
 }
 
-.download-section {
+.menu-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/menu-bg.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -270,23 +278,36 @@ a:focus {
 #map {
     /*Mobile*/
     width: 100%;
-    height: 200px;
+    height: 300px;
     margin-top: 100px;
+}
+
+.container-image-spacer {
+  padding: 0;
 }
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 150px;
+        padding-top: 100px;
     }
 
-    .download-section {
+    .menu-section {
         padding: 100px 0;
+    }
+
+    .container-image-spacer {
+      padding: 0 200px;
     }
 
     #map {
         height: 400px;
-        margin-top: 250px;
+        margin-top: 100px;
     }
+}
+
+.interior-image {
+  width: 100%;
+  margin-bottom: 35px;
 }
 
 .btn {
@@ -314,17 +335,17 @@ a:focus {
 }
 
 .btn-social {
-    border: 1px solid #000000;
-    color: #000000;
+    border: 1px solid #FFF;
+    color: #FFF;
     background-color: transparent;
 }
 
 .btn-social:hover,
 .btn-social:focus {
-    border: 1px solid #000000;
+    border: 1px solid #FFF;
     outline: 0;
-    color: #FFF;
-    background-color: #000000;
+    color: #000;
+    background-color: #FFF;
 }
 
 ul.banner-social-buttons {

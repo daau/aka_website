@@ -41,11 +41,22 @@ function initMap() {
 
   // Insert the google maps widget
   var map = new google.maps.Map(mapDiv, {
-    center: {lat: 43.7486339, lng: -79.4474867},
+    center: {lat: 43.7886339, lng: -79.4474867},
     zoom: 10,
     disableDefaultUI: true,
-    zoomControl: true
+    zoomControl: true,
+    scrollwheel: false
   });
+  // Map infoWindows
+
+  var infowindow_downtown = new google.maps.InfoWindow({
+    content: 'Downtown address here'
+  });
+
+  var infowindow_markham = new google.maps.InfoWindow({
+    content: 'Markham address here'
+  });
+
   // Add markers
   var marker_downtown = new google.maps.Marker({
     position: {lat: 43.6661756, lng: -79.4073042},
@@ -57,5 +68,14 @@ function initMap() {
     position: {lat: 43.8489351, lng: -79.3499629},
     map: map,
     title: 'Markham'
+  });
+
+  // Add marker event handler
+  marker_downtown.addListener('click', function() {
+    infowindow_downtown.open(map, marker_downtown);
+  });
+
+  marker_markham.addListener('click', function() {
+    infowindow_markham.open(map, marker_markham);
   });
 }
