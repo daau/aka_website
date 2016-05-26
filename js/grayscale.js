@@ -50,22 +50,24 @@ function initMap() {
   // Map infoWindows
 
   var infowindow_downtown = new google.maps.InfoWindow({
-    content: 'Downtown address here'
+    content: 'Address:<br> 394 Bloor St W, Toronto, ON M5S 1X4' +
+    '<br>Phone:<br> (647) 748-8868'
   });
 
   var infowindow_markham = new google.maps.InfoWindow({
-    content: 'Markham address here'
+    content: 'Address:<br> 3235 Highway 7, Markham, ON L3R 3P9' +
+    '<br>Phone:<br> (905) 604-4880'
   });
 
   // Add markers
   var marker_downtown = new google.maps.Marker({
-    position: {lat: 43.6661756, lng: -79.4073042},
+    position: {lat: 43.6661334, lng: -79.4072586},
     map: map,
     title: 'Downtown'
   });
 
   var marker_markham = new google.maps.Marker({
-    position: {lat: 43.8489351, lng: -79.3499629},
+    position: {lat: 43.8489313, lng: -79.3477742},
     map: map,
     title: 'Markham'
   });
